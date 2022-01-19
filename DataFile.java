@@ -14,7 +14,7 @@ public class DataFile {
 
         String fileContents = readFileContentsOrNull(path);
         if (fileContents != null) {
-            String[] lines = fileContents.split("\\n");
+            String[] lines = fileContents.split("\\r\\n");
             for (int i = 1; i < lines.length; i++) {
                 String[] lineContents = lines[i].split(",");
                 monthData.add(new MonthlyReport(lineContents[0],
